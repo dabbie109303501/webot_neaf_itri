@@ -1,0 +1,296 @@
+#VRML_SIM R2025a utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the LRMate200iD
+# Extracted from: C:\Users\dabbie\Desktop\webots_tutorial\practice_webots\LRMate-200iD.urdf
+
+PROTO LRMate200iD [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "LRMate200iD"  # Is `Robot.name`.
+  field  SFString    controller      "void"         # Is `Robot.controller`.
+  field  MFString    controllerArgs  []             # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""             # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE          # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE           # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE          # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Shape {
+        appearance DEF Base_material PBRAppearance {
+          baseColor 0.792157 0.819608 0.933333
+          roughness 1.000000
+          metalness 0
+        }
+        geometry DEF base Mesh {
+          url "LRMate-200iD\meshes\base.stl"
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 0.000000 1.000000
+          anchor 0.000000 0.000000 0.042741
+        }
+        device [
+          RotationalMotor {
+            name "J1"
+            minPosition -2.9671
+            maxPosition 2.9671
+            maxTorque 10000
+          }
+          PositionSensor {
+            name "J1_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation 0.000000 0.000000 0.042741
+          children [
+            Shape {
+              appearance DEF J1_material PBRAppearance {
+                baseColor 0.792157 0.819608 0.933333
+                roughness 1.000000
+                metalness 0
+              }
+              geometry DEF j1 Mesh {
+                url "LRMate-200iD\meshes\j1.stl"
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 -1.000000 0.000000
+                anchor 0.050000 0.000000 0.287260
+              }
+              device [
+                RotationalMotor {
+                  name "J2"
+                  minPosition -2.5307
+                  maxPosition 1.7453
+                  maxTorque 10000
+                }
+                PositionSensor {
+                  name "J2_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation 0.050000 0.000000 0.287260
+                children [
+                  Shape {
+                    appearance DEF J2_material PBRAppearance {
+                      baseColor 0.792157 0.819608 0.933333
+                      roughness 1.000000
+                      metalness 0
+                    }
+                    geometry DEF j2 Mesh {
+                      url "LRMate-200iD\meshes\j2.stl"
+                    }
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 -1.000000 0.000000
+                      anchor 0.000000 0.000000 0.330000
+                    }
+                    device [
+                      RotationalMotor {
+                        name "J3"
+                        minPosition -1.2217
+                        maxPosition 3.5779
+                        maxTorque 10000
+                      }
+                      PositionSensor {
+                        name "J3_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.000000 0.000000 0.330000
+                      children [
+                        Shape {
+                          appearance DEF J3_material PBRAppearance {
+                            baseColor 0.792157 0.819608 0.933333
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF j3 Mesh {
+                            url "LRMate-200iD\meshes\j3.stl"
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis -1.000000 0.000000 0.000000
+                            anchor 0.088001 0.000000 0.035027
+                          }
+                          device [
+                            RotationalMotor {
+                              name "J4"
+                              minPosition -3.1416
+                              maxPosition 3.1416
+                              maxTorque 10000
+                            }
+                            PositionSensor {
+                              name "J4_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0.088001 0.000000 0.035027
+                            children [
+                              Shape {
+                                appearance DEF J4_material PBRAppearance {
+                                  baseColor 0.529412 0.549020 0.549020
+                                  roughness 1.000000
+                                  metalness 0
+                                }
+                                geometry DEF j4 Mesh {
+                                  url "LRMate-200iD\meshes\j4.stl"
+                                }
+                              }
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 -1.000000 0.000000
+                                  anchor 0.245400 0.000000 0.000000
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "J5"
+                                    minPosition -2.1817
+                                    maxPosition 2.1817
+                                    maxTorque 10000
+                                  }
+                                  PositionSensor {
+                                    name "J5_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation 0.245400 0.000000 0.000000
+                                  children [
+                                    Shape {
+                                      appearance DEF J5_material PBRAppearance {
+                                        baseColor 0.792157 0.819608 0.933333
+                                        roughness 1.000000
+                                        metalness 0
+                                      }
+                                      geometry DEF j5 Mesh {
+                                        url "LRMate-200iD\meshes\j5.stl"
+                                      }
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis -1.000000 -0.000000 0.000000
+                                        anchor 0.050000 0.000000 0.000000
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "J6"
+                                          maxTorque 10000
+                                        }
+                                        PositionSensor {
+                                          name "J6_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation 0.050000 0.000000 0.000000
+                                        rotation 1.000000 0.000000 0.000000 1.570800
+                                        name "J6"
+                                        physics Physics {
+                                          density -1
+                                          mass 0.093213
+                                          centerOfMass [ 0.012509 -0.000000 -0.000028 ]
+                                          inertiaMatrix [
+                                            5.265445e-05 3.158696e-05 3.162813e-05
+                                            3.914555e-14 3.436607e-08 2.756904e-11
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "J5"
+                                  boundingObject USE j5
+                                  physics Physics {
+                                    density -1
+                                    mass 0.353026
+                                    centerOfMass [ 0.005580 0.003772 -0.000074 ]
+                                    inertiaMatrix [
+                                      2.449525e-04 3.292240e-04 3.046354e-04
+                                      1.182355e-05 2.002576e-07 -1.143489e-08
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "J4"
+                            boundingObject USE j4
+                            physics Physics {
+                              density -1
+                              mass 0.000826
+                              centerOfMass [ 0.108899 0.008914 0.056150 ]
+                              inertiaMatrix [
+                                2.656732e-08 2.710462e-08 4.124432e-08
+                                -1.065332e-19 2.786720e-24 2.330900e-24
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                      name "J3"
+                      boundingObject USE j3
+                      physics Physics {
+                        density -1
+                        mass 2.394262
+                        centerOfMass [ 0.008237 0.000680 0.017646 ]
+                        inertiaMatrix [
+                          6.334728e-03 7.328020e-03 7.260425e-03
+                          -4.950446e-05 -7.613547e-04 -6.647260e-05
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "J2"
+                boundingObject USE j2
+                physics Physics {
+                  density -1
+                  mass 6.361362
+                  centerOfMass [ -0.007993 -0.001801 0.121256 ]
+                  inertiaMatrix [
+                    1.066513e-01 8.706777e-02 3.170156e-02
+                    8.068216e-05 1.451138e-03 -5.574152e-04
+                  ]
+                }
+              }
+            }
+          ]
+          name "J1"
+          boundingObject USE j1
+          physics Physics {
+            density -1
+            mass 14.354858
+            centerOfMass [ 0.039191 -0.000668 0.318431 ]
+            inertiaMatrix [
+              9.059617e-01 9.590944e-01 1.326389e-01
+              -6.305855e-04 -1.324298e-01 -8.315873e-04
+            ]
+          }
+        }
+      }
+    ]
+    name IS name
+    boundingObject USE base
+    physics Physics {
+      density -1
+      mass 4.853289
+      centerOfMass [ -0.006827 0.080423 0.000322 ]
+      inertiaMatrix [
+        2.198661e-02 2.280118e-02 2.382922e-02
+        1.430305e-04 1.185041e-04 3.060087e-05
+      ]
+    }
+  }
+}

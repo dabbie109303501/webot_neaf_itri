@@ -1,0 +1,371 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.22868971421730366 0.13488642427960867 0.9641092610053434 2.107501451239269
+  position 1.415532287089932 -2.341637725811388 1.6690525447232678
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+Robot {
+  translation 0 0 0.005
+  children [
+    Robot {
+      translation -1.436682506845803e-06 1.6038212843211275e-06 -0.005195540680394097
+      rotation 0.9208591003142602 0.3898952596920217 -0.00045148433192733863 0.0003899642311500947
+      children [
+        Shape {
+          appearance DEF Base_material PBRAppearance {
+            baseColor 0.792157 0.819608 0.933333
+            roughness 1
+            metalness 0
+          }
+          geometry DEF base Mesh {
+            url [
+              "C:/Users/dabbie/Desktop/webots_tutorial/practice_webots/protos/LRMate200iD/meshes/Base.stl"
+            ]
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position 0.808749686510921
+            axis 0 0 1
+            anchor 0 0 0.042741
+          }
+          device [
+            RotationalMotor {
+              name "J1"
+              minPosition -2.9671
+              maxPosition 2.9671
+              maxTorque 10000
+            }
+            PositionSensor {
+              name "J1_sensor"
+            }
+          ]
+          endPoint Solid {
+            translation 0 0 0.042741
+            rotation 0 0 0.9999999999999999 0
+            children [
+              Shape {
+                appearance DEF J1_material PBRAppearance {
+                  baseColor 0.792157 0.819608 0.933333
+                  roughness 1
+                  metalness 0
+                }
+                geometry DEF j1 Mesh {
+                  url [
+                    "C:/Users/dabbie/Desktop/webots_tutorial/practice_webots/protos/LRMate200iD/meshes/J1.stl"
+                  ]
+                }
+              }
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 0.8287627598003954
+                  axis 0 -1 0
+                  anchor 0.05 0 0.28726
+                }
+                device [
+                  RotationalMotor {
+                    name "J2"
+                    minPosition -2.5307
+                    maxPosition 1.7453
+                    maxTorque 10000
+                  }
+                  PositionSensor {
+                    name "J2_sensor"
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.05010638112522202 -2.4326014816271738e-08 0.2871624934453108
+                  rotation 1.5141525994023711e-07 -0.9999999999999862 6.71881e-08 0
+                  children [
+                    Shape {
+                      appearance DEF J2_material PBRAppearance {
+                        baseColor 0.792157 0.819608 0.933333
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry DEF j2 Mesh {
+                        url [
+                          "C:/Users/dabbie/Desktop/webots_tutorial/practice_webots/protos/LRMate200iD/meshes/J2.stl"
+                        ]
+                      }
+                    }
+                    HingeJoint {
+                      jointParameters HingeJointParameters {
+                        position 0.8487488467414969
+                        axis 0 -1 0
+                        anchor 0 0 0.33
+                      }
+                      device [
+                        RotationalMotor {
+                          name "J3"
+                          minPosition -1.2217
+                          maxPosition 3.5779
+                          maxTorque 10000
+                        }
+                        PositionSensor {
+                          name "J3_sensor"
+                        }
+                      ]
+                      endPoint Solid {
+                        translation 0 0 0.33
+                        rotation 0 -0.9999999999999999 0 0
+                        children [
+                          Shape {
+                            appearance DEF J3_material PBRAppearance {
+                              baseColor 0.792157 0.819608 0.933333
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry DEF j3 Mesh {
+                              url [
+                                "C:/Users/dabbie/Desktop/webots_tutorial/practice_webots/protos/LRMate200iD/meshes/J3.stl"
+                              ]
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              position 0.8687497159415317
+                              axis -1 0 0
+                              anchor 0.088001 0 0.035027
+                            }
+                            device [
+                              RotationalMotor {
+                                name "J4"
+                                minPosition -3.1416
+                                maxPosition 3.1416
+                                maxTorque 10000
+                              }
+                              PositionSensor {
+                                name "J4_sensor"
+                              }
+                            ]
+                            endPoint Solid {
+                              translation 0.0880010009579039 -5.353369973816848e-06 0.03502247370738789
+                              rotation -0.9999999999976131 1.98190204159939e-06 -9.198653865755391e-07 0
+                              children [
+                                Shape {
+                                  appearance DEF J4_material PBRAppearance {
+                                    baseColor 0.529412 0.54902 0.54902
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry DEF j4 Mesh {
+                                    url [
+                                      "C:/Users/dabbie/Desktop/webots_tutorial/practice_webots/protos/LRMate200iD/meshes/J4.stl"
+                                    ]
+                                  }
+                                }
+                                HingeJoint {
+                                  jointParameters HingeJointParameters {
+                                    position 0.888747321328273
+                                    axis 0 -1 0
+                                    anchor 0.2454 0 0
+                                  }
+                                  device [
+                                    RotationalMotor {
+                                      name "J5"
+                                      minPosition -2.1817
+                                      maxPosition 2.1817
+                                      maxTorque 10000
+                                    }
+                                    PositionSensor {
+                                      name "J5_sensor"
+                                    }
+                                  ]
+                                  endPoint Solid {
+                                    translation 0.2454 0 0
+                                    rotation 0 -1 0 0
+                                    children [
+                                      Shape {
+                                        appearance DEF J5_material PBRAppearance {
+                                          baseColor 0.792157 0.819608 0.933333
+                                          roughness 1
+                                          metalness 0
+                                        }
+                                        geometry DEF j5 Mesh {
+                                          url [
+                                            "C:/Users/dabbie/Desktop/webots_tutorial/practice_webots/protos/LRMate200iD/meshes/J5.stl"
+                                          ]
+                                        }
+                                      }
+                                      HingeJoint {
+                                        jointParameters HingeJointParameters {
+                                          position 0.9087479352537532
+                                          axis -1 0 0
+                                          anchor 0.05 0 0
+                                        }
+                                        device [
+                                          RotationalMotor {
+                                            name "J6"
+                                            maxTorque 10000
+                                          }
+                                          PositionSensor {
+                                            name "J6_sensor"
+                                          }
+                                        ]
+                                        endPoint Solid {
+                                          translation 0.05 0 0
+                                          rotation 1 0 0 0.6620520619874916
+                                          name "J6"
+                                          physics Physics {
+                                            density -1
+                                            mass 0.093213
+                                            centerOfMass [
+                                              0.012509 0 -2.8e-05
+                                            ]
+                                            inertiaMatrix [
+                                              5.265445e-05 3.158696e-05 3.162813e-05
+                                              3.914555e-14 3.436607e-08 2.756904e-11
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                    name "J5"
+                                    boundingObject USE j5
+                                    physics Physics {
+                                      density -1
+                                      mass 0.353026
+                                      centerOfMass [
+                                        0.00558 0.003772 -7.4e-05
+                                      ]
+                                      inertiaMatrix [
+                                        0.0002449525 0.000329224 0.0003046354
+                                        1.182355e-05 2.002576e-07 -1.143489e-08
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                              name "J4"
+                              boundingObject USE j4
+                              physics Physics {
+                                density -1
+                                mass 0.000826
+                                centerOfMass [
+                                  0.108899 0.008914 0.05615
+                                ]
+                                inertiaMatrix [
+                                  2.656732e-08 2.710462e-08 4.124432e-08
+                                  -1.065332e-19 2.78672e-24 2.3309e-24
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                        name "J3"
+                        boundingObject USE j3
+                        physics Physics {
+                          density -1
+                          mass 2.394262
+                          centerOfMass [
+                            0.008237 0.00068 0.017646
+                          ]
+                          inertiaMatrix [
+                            0.006334728 0.00732802 0.007260425
+                            -4.950446e-05 -0.0007613547 -6.64726e-05
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                  name "J2"
+                  boundingObject USE j2
+                  physics Physics {
+                    density -1
+                    mass 6.361362
+                    centerOfMass [
+                      -0.007993 -0.001801 0.121256
+                    ]
+                    inertiaMatrix [
+                      0.1066513 0.08706777 0.03170156
+                      8.068216e-05 0.001451138 -0.0005574152
+                    ]
+                  }
+                }
+              }
+            ]
+            name "J1"
+            boundingObject USE j1
+            physics Physics {
+              density -1
+              mass 14.354858
+              centerOfMass [
+                0.039191 -0.000668 0.318431
+              ]
+              inertiaMatrix [
+                0.9059617 0.9590944 0.1326389
+                -0.0006305855 -0.1324298 -0.0008315873
+              ]
+            }
+          }
+        }
+      ]
+      name "LRMate200iD"
+      boundingObject USE base
+      physics Physics {
+        density -1
+        mass 4.853289
+        centerOfMass [
+          -0.006827 0.080423 0.000322
+        ]
+        inertiaMatrix [
+          0.02198661 0.02280118 0.02382922
+          0.0001430305 0.0001185041 3.060087e-05
+        ]
+      }
+      controller "controller_zero2start"
+      supervisor TRUE
+    }
+  ]
+}
+DEF wooden Solid {
+  translation 0.14 0 0.05
+  children [
+    DEF BOX_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/textures/wooden_box_base_color.jpg"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/textures/wooden_box_roughness.jpg"
+          ]
+        }
+        metalness 0
+        normalMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/textures/wooden_box_normal.jpg"
+          ]
+        }
+        occlusionMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/textures/wooden_box_occlusion.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "wooden box"
+  model "wooden box"
+  boundingObject USE BOX_SHAPE
+}
